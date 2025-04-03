@@ -2,6 +2,7 @@
 
 import { exchangeToken } from '@/apis/auth';
 import { SocialLoginButton } from '@/components/auth/SocialLoginButton';
+import { useAuthStore } from '@/store/useAuthStore';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect } from 'react';
 
@@ -9,15 +10,20 @@ export default function Login() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const code = searchParams.get('code');
-  const provider = localStorage.getItem('provider') || '';
+  let provider = '';
+
+  if (typeof window !== 'undefined') {
+    provider = localStorage.getItem('provider') || '';
+  }
 
   useEffect(() => {
     if (!code) return;
 
     const fetchToken = async () => {
       try {
-        const { token } = await exchangeToken(provider, code);
-        console.log(token); // 추후 전역 상태 관리할 때 변경 예정
+        const { accessToken, refreshToken } = await exchangeToken(provider, code);
+        useAuthStore.getState().setTokens({ accessToken, refreshToken });
+        console.log(accessToken, refreshToken);
         router.push('/');
       } catch (error) {
         console.error(error);
