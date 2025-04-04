@@ -1,1 +1,684 @@
-{}
+{
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/lang-angular": {
+    "id": 9113,
+    "files": [
+      "static/chunks/9113.c5e2459fe3dae100.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/lang-cpp": {
+    "id": 1727,
+    "files": [
+      "static/chunks/1727.49381a6e11fa106c.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/lang-css": {
+    "id": 61,
+    "files": []
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/lang-go": {
+    "id": 3160,
+    "files": [
+      "static/chunks/3160.db45a02a1c7b0b9b.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/lang-html": {
+    "id": 943,
+    "files": []
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/lang-java": {
+    "id": 5706,
+    "files": [
+      "static/chunks/5706.691df8ce2eff72d9.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/lang-javascript": {
+    "id": 7175,
+    "files": []
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/lang-json": {
+    "id": 3405,
+    "files": [
+      "static/chunks/3405.c11dca8872b9e320.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/lang-less": {
+    "id": 2310,
+    "files": [
+      "static/chunks/2310.53a7f277f2e8cb9d.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/lang-liquid": {
+    "id": 5325,
+    "files": [
+      "static/chunks/5325.909b3bfd7be6a5ba.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/lang-markdown": {
+    "id": 9593,
+    "files": []
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/lang-php": {
+    "id": 8897,
+    "files": [
+      "static/chunks/8897.bc9ea653665ab0d2.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/lang-python": {
+    "id": 7988,
+    "files": [
+      "static/chunks/7988.0e2c691d95bf9257.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/lang-rust": {
+    "id": 6988,
+    "files": [
+      "static/chunks/6988.8c09e708f94a12e0.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/lang-sass": {
+    "id": 4950,
+    "files": [
+      "static/chunks/4950.0e113b6fab6cdbd8.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/lang-sql": {
+    "id": 7623,
+    "files": [
+      "static/chunks/7623.99ae9c632784713f.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/lang-vue": {
+    "id": 787,
+    "files": [
+      "static/chunks/787.55eac12423efc654.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/lang-wast": {
+    "id": 704,
+    "files": [
+      "static/chunks/704.ebfe564a4303501a.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/lang-xml": {
+    "id": 8962,
+    "files": [
+      "static/chunks/8962.b34af3698652c62e.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/lang-yaml": {
+    "id": 3681,
+    "files": [
+      "static/chunks/3681.a65ed736b907ce49.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/apl": {
+    "id": 2182,
+    "files": [
+      "static/chunks/2182.d42bbf2fa6e3042c.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/asciiarmor": {
+    "id": 5365,
+    "files": [
+      "static/chunks/5365.6f097d26f1d9c8b4.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/asn1": {
+    "id": 4246,
+    "files": [
+      "static/chunks/4246.237830b4288cc54c.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/asterisk": {
+    "id": 6747,
+    "files": [
+      "static/chunks/6747.fefa0c79460f3d9c.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/brainfuck": {
+    "id": 5258,
+    "files": [
+      "static/chunks/5258.51381f037a13979b.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/clike": {
+    "id": 8643,
+    "files": [
+      "static/chunks/8643.de27d78bdda15145.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/clojure": {
+    "id": 5769,
+    "files": [
+      "static/chunks/5769.2c41e779e5e67803.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/cmake": {
+    "id": 7094,
+    "files": [
+      "static/chunks/7094.4f32f313d0fcd3ff.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/cobol": {
+    "id": 3050,
+    "files": [
+      "static/chunks/3050.780847c811568814.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/coffeescript": {
+    "id": 3608,
+    "files": [
+      "static/chunks/3608.4d4e576b658f93cf.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/commonlisp": {
+    "id": 9534,
+    "files": [
+      "static/chunks/9534.bd3779ab9a62eb34.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/crystal": {
+    "id": 947,
+    "files": [
+      "static/chunks/947.64d407a7c6a9ff84.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/css": {
+    "id": 7566,
+    "files": [
+      "static/chunks/7566.92cafce7341c58bf.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/cypher": {
+    "id": 1596,
+    "files": [
+      "static/chunks/1596.084c3a218c9434a1.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/d": {
+    "id": 4329,
+    "files": [
+      "static/chunks/4329.6d4aabfb71a79927.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/diff": {
+    "id": 6412,
+    "files": [
+      "static/chunks/4031.1631e7961fcfd7ec.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/dockerfile": {
+    "id": 5281,
+    "files": [
+      "static/chunks/5281.6ff87f08770818ba.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/dtd": {
+    "id": 473,
+    "files": [
+      "static/chunks/473.a3537d3f5deb2428.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/dylan": {
+    "id": 7723,
+    "files": [
+      "static/chunks/7723.6eb3555533abd4ba.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/ebnf": {
+    "id": 492,
+    "files": [
+      "static/chunks/492.3b819384719e88a0.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/ecl": {
+    "id": 3997,
+    "files": [
+      "static/chunks/3997.cde5e3136a046f36.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/eiffel": {
+    "id": 3900,
+    "files": [
+      "static/chunks/3900.d0da5173d1ffd0bc.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/elm": {
+    "id": 9969,
+    "files": [
+      "static/chunks/9969.5309878f73e3b7fc.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/erlang": {
+    "id": 4972,
+    "files": [
+      "static/chunks/4972.1a1250dc77a3986a.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/factor": {
+    "id": 2512,
+    "files": [
+      "static/chunks/2512.d452d365178b3043.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/fcl": {
+    "id": 6848,
+    "files": [
+      "static/chunks/6848.f307e3541d2411ef.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/forth": {
+    "id": 2626,
+    "files": [
+      "static/chunks/2626.4c6494e2844ca08b.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/fortran": {
+    "id": 895,
+    "files": [
+      "static/chunks/895.f7efd8e12dd84da5.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/gas": {
+    "id": 9620,
+    "files": [
+      "static/chunks/9620.6c74e4fce6701381.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/gherkin": {
+    "id": 4447,
+    "files": [
+      "static/chunks/4447.cb712e31da63e83c.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/groovy": {
+    "id": 8877,
+    "files": [
+      "static/chunks/8877.8bb8535115a02183.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/haskell": {
+    "id": 7557,
+    "files": [
+      "static/chunks/7557.723283110ad873a7.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/haxe": {
+    "id": 811,
+    "files": [
+      "static/chunks/811.158af86bfe9c0853.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/http": {
+    "id": 7847,
+    "files": [
+      "static/chunks/7847.8f63dac0db94c3a2.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/idl": {
+    "id": 3658,
+    "files": [
+      "static/chunks/3658.0b746e5286d62d3f.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/javascript": {
+    "id": 5068,
+    "files": [
+      "static/chunks/5068.3e006a9a89b14bce.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/jinja2": {
+    "id": 7861,
+    "files": [
+      "static/chunks/7861.359d737304cd70a6.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/julia": {
+    "id": 236,
+    "files": [
+      "static/chunks/236.bd3dd46643d41b75.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/livescript": {
+    "id": 9894,
+    "files": [
+      "static/chunks/9894.588663cb30b63aab.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/lua": {
+    "id": 2139,
+    "files": [
+      "static/chunks/2139.65da25c9be59903f.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/mathematica": {
+    "id": 6501,
+    "files": [
+      "static/chunks/6501.9413a8d6ace3e3e0.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/mbox": {
+    "id": 4827,
+    "files": [
+      "static/chunks/4827.c11b41582ceea32e.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/mirc": {
+    "id": 8798,
+    "files": [
+      "static/chunks/8798.51a1841adad12d75.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/mllike": {
+    "id": 4413,
+    "files": [
+      "static/chunks/4413.8cfa310082be69b7.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/modelica": {
+    "id": 5823,
+    "files": [
+      "static/chunks/5823.27b0deee6da2c549.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/mscgen": {
+    "id": 1978,
+    "files": [
+      "static/chunks/1978.9245b1460302f6c8.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/mumps": {
+    "id": 7009,
+    "files": [
+      "static/chunks/7009.b7ce84c404663a9f.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/nginx": {
+    "id": 989,
+    "files": [
+      "static/chunks/989.58b2dcc6a555f048.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/nsis": {
+    "id": 1452,
+    "files": [
+      "static/chunks/1452.b7f8472033765cfa.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/ntriples": {
+    "id": 5163,
+    "files": [
+      "static/chunks/7544.2f35afca4f6b4429.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/octave": {
+    "id": 3823,
+    "files": [
+      "static/chunks/3823.dcc3b3fcfde97045.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/oz": {
+    "id": 9906,
+    "files": [
+      "static/chunks/9906.51ce51590c401f2f.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/pascal": {
+    "id": 3927,
+    "files": [
+      "static/chunks/3927.6d724ccacf2c9500.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/perl": {
+    "id": 3142,
+    "files": [
+      "static/chunks/3142.011f14345b0824d8.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/pig": {
+    "id": 5037,
+    "files": [
+      "static/chunks/5037.8898d1cb861e8dac.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/powershell": {
+    "id": 4790,
+    "files": [
+      "static/chunks/4790.d72df95575bd9120.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/properties": {
+    "id": 1746,
+    "files": [
+      "static/chunks/1746.7f2be8e150c18f0d.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/protobuf": {
+    "id": 9680,
+    "files": [
+      "static/chunks/9680.ee6fa47e879cb9b1.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/pug": {
+    "id": 1905,
+    "files": [
+      "static/chunks/1905.239f381d86eb93bb.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/puppet": {
+    "id": 5997,
+    "files": [
+      "static/chunks/5997.c9036239182a032f.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/python": {
+    "id": 6341,
+    "files": [
+      "static/chunks/6341.559597966de2acb0.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/q": {
+    "id": 8930,
+    "files": [
+      "static/chunks/8930.5969f9b716a46043.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/r": {
+    "id": 2535,
+    "files": [
+      "static/chunks/2535.6d0fb5e48bcdd9af.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/rpm": {
+    "id": 3824,
+    "files": [
+      "static/chunks/3824.1c39b0f0d6e4ebdf.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/ruby": {
+    "id": 2367,
+    "files": [
+      "static/chunks/2367.d0f70a825ccf96fa.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/sas": {
+    "id": 648,
+    "files": [
+      "static/chunks/648.88751ee915a935ca.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/scheme": {
+    "id": 1428,
+    "files": [
+      "static/chunks/1428.809f4589ae8a0d3c.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/shell": {
+    "id": 1611,
+    "files": [
+      "static/chunks/1611.4788a2b489e56f58.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/sieve": {
+    "id": 4363,
+    "files": [
+      "static/chunks/4363.b316f0d43210f665.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/smalltalk": {
+    "id": 4031,
+    "files": [
+      "static/chunks/6412.9b24cc727440e600.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/solr": {
+    "id": 9411,
+    "files": [
+      "static/chunks/9411.947265c7dcfb545b.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/sparql": {
+    "id": 5934,
+    "files": [
+      "static/chunks/5934.f8feb6c43bb18d34.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/spreadsheet": {
+    "id": 1155,
+    "files": [
+      "static/chunks/1155.79298ccfc0fa8155.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/sql": {
+    "id": 8189,
+    "files": [
+      "static/chunks/8189.93d8dddbee046db0.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/stex": {
+    "id": 1765,
+    "files": [
+      "static/chunks/1765.2825793b98d3a08c.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/stylus": {
+    "id": 685,
+    "files": [
+      "static/chunks/685.10c9fcb86085ce6d.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/swift": {
+    "id": 2678,
+    "files": [
+      "static/chunks/2678.4c6e31d256c295a2.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/tcl": {
+    "id": 3514,
+    "files": [
+      "static/chunks/3514.e644ab5a8ceb1b8e.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/textile": {
+    "id": 940,
+    "files": [
+      "static/chunks/940.07a009b2a8a745c2.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/tiddlywiki": {
+    "id": 5971,
+    "files": [
+      "static/chunks/5971.7be06fc6e16e7711.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/tiki": {
+    "id": 4100,
+    "files": [
+      "static/chunks/4100.b7f00450df785eb4.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/toml": {
+    "id": 615,
+    "files": [
+      "static/chunks/615.f62e93075cf1134d.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/troff": {
+    "id": 6718,
+    "files": [
+      "static/chunks/6718.d430235834f9c841.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/ttcn": {
+    "id": 2954,
+    "files": [
+      "static/chunks/2954.8be81f5cbf9878f6.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/ttcn-cfg": {
+    "id": 2261,
+    "files": [
+      "static/chunks/2261.c6dff69e4f1996be.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/turtle": {
+    "id": 6125,
+    "files": [
+      "static/chunks/6125.d9bfda6afc838c46.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/vb": {
+    "id": 923,
+    "files": [
+      "static/chunks/923.b4b5eda0d646a513.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/vbscript": {
+    "id": 4680,
+    "files": [
+      "static/chunks/4680.430cbc085fc4daf1.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/velocity": {
+    "id": 5668,
+    "files": [
+      "static/chunks/5668.14887d04dac0a686.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/verilog": {
+    "id": 2735,
+    "files": [
+      "static/chunks/2735.35d7e17904812871.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/vhdl": {
+    "id": 5441,
+    "files": [
+      "static/chunks/5441.7f9ab554433cded0.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/webidl": {
+    "id": 7862,
+    "files": [
+      "static/chunks/7862.0fa8ed0d5d1fa6d7.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/xquery": {
+    "id": 5311,
+    "files": [
+      "static/chunks/5311.472cdd0719e4285a.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/yacas": {
+    "id": 2474,
+    "files": [
+      "static/chunks/2474.81888517bfab49b0.js"
+    ]
+  },
+  "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/z80": {
+    "id": 4559,
+    "files": [
+      "static/chunks/4559.648a8f7b0c09bcc4.js"
+    ]
+  }
+}

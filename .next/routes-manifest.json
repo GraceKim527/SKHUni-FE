@@ -32,6 +32,18 @@
       "regex": "^/login(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/login(?:/)?$"
+    },
+    {
+      "page": "/mypage",
+      "regex": "^/mypage(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/mypage(?:/)?$"
+    },
+    {
+      "page": "/mypage/edit",
+      "regex": "^/mypage/edit(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/mypage/edit(?:/)?$"
     }
   ],
   "dataRoutes": [],
