@@ -26,7 +26,6 @@ instance.interceptors.response.use(
   (response) => response,
   async (error) => {
     const originalRequest = error.config;
-
     // accessToken 만료로 401 응답이 왔다면,
     if (
       error.response.status === 401 &&
@@ -36,6 +35,7 @@ instance.interceptors.response.use(
       originalRequest._retry = true;
       try {
         const { accessToken } = await refreshAccessToken();
+        console.log(accessToken);
         useAuthStore
           .getState()
           .setTokens({ accessToken, refreshToken: useAuthStore.getState().refreshToken! });

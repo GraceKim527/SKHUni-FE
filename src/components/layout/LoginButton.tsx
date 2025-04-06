@@ -7,14 +7,29 @@ import useIsMounted from '@/hooks/useIsMounted';
 
 export default function LoginButton() {
   const isLoggedIn = useAuthStore((state) => state.isLoggedIn());
+  const userInfo = useAuthStore((state) => state.userInfo);
   const { handleLogout } = useLogout();
   const mounted = useIsMounted();
 
   if (!mounted) return null;
 
   return isLoggedIn ? (
-    <div className="flex gap-4">
-      <p>000님 안녕하세요!</p>
+    <div className="flex gap-8 items-center">
+      <div className="flex gap-4 items-center">
+        <p className="text-base">
+          <b>{userInfo.name}</b>님 안녕하세요!
+        </p>
+        <Link href="/mypage">
+          <img
+            src={userInfo.profileImage}
+            alt="profile"
+            width={32}
+            height={32}
+            className="rounded-full"
+          />
+        </Link>
+      </div>
+
       <button onClick={handleLogout}>로그아웃</button>
     </div>
   ) : (

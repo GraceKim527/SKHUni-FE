@@ -11,7 +11,6 @@ export const exchangeToken = async (provider: string, code: string) => {
       code: code || '',
     }
   );
-  console.log(response.data.data);
   return response.data.data;
 };
 

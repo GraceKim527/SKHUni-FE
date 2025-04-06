@@ -23,7 +23,8 @@ export default function Login() {
       try {
         const { accessToken, refreshToken } = await exchangeToken(provider, code);
         useAuthStore.getState().setTokens({ accessToken, refreshToken });
-        console.log(accessToken, refreshToken);
+        useAuthStore.getState().fetchRole();
+        useAuthStore.getState().fetchUserInfo();
         router.push('/');
       } catch (error) {
         console.error(error);
