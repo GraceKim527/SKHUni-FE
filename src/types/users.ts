@@ -13,6 +13,7 @@ export enum Field {
 }
 
 export interface UserInfo {
+  memberId: number;
   email: string;
   name: string;
   picture: string;
@@ -30,4 +31,13 @@ export interface UserInfo {
   linkedIn: string;
   etc1: string;
   etc2: string;
+}
+
+export interface MemberList {
+  members: UserInfo[];
+  pageInfo: {
+    currentPage: number;
+    totalPages: number;
+    totalItems: number;
+  };
 }

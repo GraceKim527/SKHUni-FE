@@ -1,7 +1,7 @@
 'use client';
 
 interface SearchInputProps {
-  value: string;
+  value: string | undefined;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 

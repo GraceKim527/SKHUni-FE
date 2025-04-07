@@ -25,7 +25,7 @@ export default function LoginButton() {
             alt="profile"
             width={32}
             height={32}
-            className="rounded-full"
+            className="object-cover w-8 h-8 rounded-full"
           />
         </Link>
       </div>
