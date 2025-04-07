@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { SearchInput } from './SearchInput';
 import FieldDropdown from './FieldDropdown';
-import { Field } from '@/constants/fields';
+import { Field } from '@/types/users';
 import ToggleFilters from './ToggleFilters';
 
 export const MemberFilterBar = () => {

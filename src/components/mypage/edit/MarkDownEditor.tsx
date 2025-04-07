@@ -1,11 +1,13 @@
 import { MdEditor, config } from 'md-editor-rt';
-import { useState } from 'react';
 import ko_KR from '@vavt/cm-extension/dist/locale/ko-KR';
 import 'md-editor-rt/lib/style.css';
 
-export const MarkDownEditor = () => {
-  const [text, setText] = useState('');
+interface MarkDownEditorProps {
+  value: string;
+  onChange: (value: string) => void;
+}
 
+export const MarkDownEditor = ({ value, onChange }: MarkDownEditorProps) => {
   config({
     editorConfig: {
       languageUserDefined: {
@@ -21,8 +23,8 @@ export const MarkDownEditor = () => {
         border: '1px solid oklch(0.872 0.01 258.338) !important',
         borderRadius: '8px',
       }}
-      value={text}
-      onChange={setText}
+      value={value}
+      onChange={onChange}
       theme="light"
       previewTheme="github"
       language="ko-KR"

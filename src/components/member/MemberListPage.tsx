@@ -22,7 +22,6 @@ export const MemberListPage = () => {
 
         <MemberCard />
       </div>
-      {/* 백엔드 api에 따라 조금 수정 될 예정 */}
       <Pagination
         currentPage={currentPage}
         totalCount={10}

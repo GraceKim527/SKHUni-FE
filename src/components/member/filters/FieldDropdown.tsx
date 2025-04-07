@@ -1,8 +1,10 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { Field, FIELD_LABELS, FIELD_OPTIONS } from '@/constants/fields';
+import { Field } from '@/types/users';
+import { FIELD_LABELS } from '@/constants/labels';
 import Image from 'next/image';
+import { FIELD_OPTIONS } from '@/constants/options';
 
 interface FieldDropdownProps {
   selected: Field | '';
