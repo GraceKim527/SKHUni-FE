@@ -18,7 +18,7 @@ export default function Header() {
             <Link href="/projects" className="px-2 py-1 rounded-md hover:bg-gray-100">
               Project
             </Link>
-            <Link href="/members" className="px-2 py-1 rounded-md hover:bg-gray-100">
+            <Link href="/member" className="px-2 py-1 rounded-md hover:bg-gray-100">
               Member
             </Link>
           </nav>

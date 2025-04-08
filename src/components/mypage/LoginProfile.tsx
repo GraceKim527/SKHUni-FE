@@ -11,7 +11,7 @@ export const LoginProfile = () => {
         alt="profile"
         width={100}
         height={100}
-        className="overflow-hidden rounded-full"
+        className="object-cover w-24 h-24 rounded-full"
       />
       <div className="flex flex-col gap-4 justify-center">
         <p className="text-lg font-bold leading-none text-gray-900">{userInfo.name}</p>

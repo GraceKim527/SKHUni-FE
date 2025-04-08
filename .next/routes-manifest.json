@@ -13,7 +13,16 @@
     }
   ],
   "headers": [],
-  "dynamicRoutes": [],
+  "dynamicRoutes": [
+    {
+      "page": "/member/[id]",
+      "regex": "^/member/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/member/(?<nxtPid>[^/]+?)(?:/)?$"
+    }
+  ],
   "staticRoutes": [
     {
       "page": "/",
@@ -34,10 +43,10 @@
       "namedRegex": "^/login(?:/)?$"
     },
     {
-      "page": "/members",
-      "regex": "^/members(?:/)?$",
+      "page": "/member",
+      "regex": "^/member(?:/)?$",
       "routeKeys": {},
-      "namedRegex": "^/members(?:/)?$"
+      "namedRegex": "^/member(?:/)?$"
     },
     {
       "page": "/mypage",

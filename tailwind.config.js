@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const { require } = require('node:module');
+
 module.exports = {
   content: ['./src/**/*.{ts,tsx}'],
   theme: {
@@ -26,5 +29,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/line-clamp')],
 };

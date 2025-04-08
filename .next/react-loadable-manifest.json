@@ -538,9 +538,9 @@
     ]
   },
   "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/sparql": {
-    "id": 5934,
+    "id": 3553,
     "files": [
-      "static/chunks/5934.f8feb6c43bb18d34.js"
+      "static/chunks/5934.6c9d110fe4a5c719.js"
     ]
   },
   "../node_modules/@codemirror/language-data/dist/index.js -> @codemirror/legacy-modes/mode/spreadsheet": {

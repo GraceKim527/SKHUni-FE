@@ -1,12 +1,13 @@
 import { FIELD_LABELS } from '@/constants/labels';
 import { AbleBadge } from '../common/AbleBadge';
 import { Field, UserInfo } from '@/types/users';
-
+import { useRouter } from 'next/navigation';
 interface MemberCardProps {
   member: UserInfo;
 }
 
 export const MemberCard = ({ member }: MemberCardProps) => {
+  const router = useRouter();
   return (
     <div className="flex gap-8 w-full">
       <img
@@ -19,7 +20,12 @@ export const MemberCard = ({ member }: MemberCardProps) => {
       />
       <div className="flex flex-col gap-2">
         <div className="flex gap-2 items-center">
-          <h3 className="text-lg font-bold">{member.name}</h3>
+          <h3
+            className="text-lg font-bold cursor-pointer hover:underline"
+            onClick={() => router.push(`/member/${member.memberId}`)}
+          >
+            {member.name}
+          </h3>
           <span>·</span>
           <p className="text-sm text-gray-500">
             {FIELD_LABELS[member.fieldType as Field] || '분야 미정'}

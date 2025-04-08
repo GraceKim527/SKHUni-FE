@@ -3,9 +3,13 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
+interface TechStack {
+  id: string;
+  name: string;
+}
 interface TechStackDropdownProps {
-  stackList: string[];
-  value: string[];
+  stackList: TechStack[];
+  value: string[]; // id
   onChange: (newSelected: string[]) => void;
   placeholder?: string;
 }
@@ -51,13 +55,13 @@ export default function TechStackDropdown({
         >
           <div className="flex flex-wrap gap-2">
             {value.length > 0 ? (
-              value.map((stack) => (
+              value.map((id) => (
                 <span
-                  key={stack}
-                  onClick={() => handleRemove(stack)}
+                  key={id}
+                  onClick={() => handleRemove(id)}
                   className="flex gap-1 items-center px-2 py-1 text-sm bg-gray-100 rounded-full cursor-pointer hover:bg-gray-200"
                 >
-                  {stack} x
+                  {stackList.find((stack) => stack.id === id)?.name} x
                 </span>
               ))
             ) : (
@@ -71,14 +75,14 @@ export default function TechStackDropdown({
         {isOpen && (
           <ul className="overflow-y-auto absolute z-10 mt-2 w-full max-h-48 bg-white rounded-lg border border-gray-300 shadow-sm">
             {stackList
-              .filter((stack) => !value.includes(stack))
+              .filter((stack) => !value.includes(stack.id))
               .map((stack) => (
                 <li
-                  key={stack}
-                  onClick={() => handleSelect(stack)}
+                  key={stack.id}
+                  onClick={() => handleSelect(stack.id)}
                   className="px-4 py-2 text-sm text-gray-700 cursor-pointer hover:bg-gray-100"
                 >
-                  {stack}
+                  {stack.name}
                 </li>
               ))}
           </ul>

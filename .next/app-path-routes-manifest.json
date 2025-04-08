@@ -1,7 +1,8 @@
 {
   "/_not-found/page": "/_not-found",
   "/login/page": "/login",
-  "/members/page": "/members",
+  "/member/page": "/member",
+  "/member/[id]/page": "/member/[id]",
   "/mypage/edit/page": "/mypage/edit",
   "/mypage/page": "/mypage",
   "/page": "/"

@@ -17,6 +17,11 @@ import { useRouter } from 'next/navigation';
 import LoadingSpinner from '@/components/common/LoadingSpinner';
 import { uploadProfileImage } from '@/apis/images';
 
+interface TechStack {
+  id: string;
+  name: string;
+}
+
 export const EditProfileForm = () => {
   const [selectedStacks, setSelectedStacks] = useState<string[]>([]);
   const [userInfo, setUserInfo] = useState<UserInfo>();
@@ -259,7 +264,7 @@ export const EditProfileForm = () => {
             </div>
 
             <TechStackSelector
-              stackList={STACKS_WITH_NAMES.map((stack) => stack.name)}
+              stackList={STACKS_WITH_NAMES as unknown as TechStack[]}
               value={selectedStacks}
               onChange={(value) => {
                 setSelectedStacks(value);

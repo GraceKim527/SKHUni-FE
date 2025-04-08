@@ -32,7 +32,7 @@ export const MyProfile = ({ userInfo }: MyProfileProps) => {
           alt="profile"
           width={120}
           height={120}
-          className="overflow-hidden rounded-full"
+          className="object-cover w-24 h-24 rounded-full"
         />
         <div className="flex justify-between w-[400px]">
           <div className="flex flex-col gap-2">
@@ -80,18 +80,23 @@ export const MyProfile = ({ userInfo }: MyProfileProps) => {
       </div>
       <div className="flex flex-col gap-2">
         <h3 className="text-lg font-semibold text-gray-900">기술 스택</h3>
-        {userInfo?.techStack ? (
-          <div className="flex gap-2">
-            <img
-              src={`https://skillicons.dev/icons?i=${userInfo?.techStack}`}
-              alt="github"
-              width={32}
-              height={32}
-            />
-          </div>
-        ) : (
-          <p className="text-sm text-gray-500">기술 스택이 없습니다.</p>
-        )}
+        <div className="flex gap-2">
+          {userInfo?.techStack ? (
+            userInfo?.techStack
+              .split(',')
+              .map((tech) => (
+                <img
+                  key={tech}
+                  src={`https://skillicons.dev/icons?i=${tech}`}
+                  alt="github"
+                  width={32}
+                  height={32}
+                />
+              ))
+          ) : (
+            <p className="text-sm text-gray-500">기술 스택이 없습니다.</p>
+          )}
+        </div>
       </div>
       <div className="flex flex-col gap-2">
         <h3 className="text-lg font-semibold text-gray-900">링크</h3>
