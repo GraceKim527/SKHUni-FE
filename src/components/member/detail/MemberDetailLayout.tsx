@@ -10,6 +10,7 @@ import MemberBasicInfo from './MemberBasicInfo';
 import { MemberDetailTabs } from './MemberDetailTabs';
 import MemberStackInfo from './MemberStackInfo';
 import { Project } from '@/types/projects';
+import { BackLink } from '@/components/common/BackLink';
 
 export default function MemberDetailLayout() {
   const { id } = useParams();
@@ -33,13 +34,16 @@ export default function MemberDetailLayout() {
     );
 
   return (
-    <section className="flex flex-col w-[60rem] justify-center mx-auto mt-8 gap-16">
-      <div className="flex flex-col gap-4">
-        <MemberBasicInfo member={member} />
-        <MemberStackInfo member={member} />
-      </div>
+    <section className="flex flex-col w-[60rem] justify-center mx-auto mt-8 gap-4">
+      <BackLink href="/member" />
+      <div className="flex flex-col gap-16 justify-center mx-auto w-full">
+        <div className="flex flex-col gap-4">
+          <MemberBasicInfo member={member} />
+          <MemberStackInfo member={member} />
+        </div>
 
-      <MemberDetailTabs member={member} projects={projects} />
+        <MemberDetailTabs member={member} projects={projects} />
+      </div>
     </section>
   );
 }

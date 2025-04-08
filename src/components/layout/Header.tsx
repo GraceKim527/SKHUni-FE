@@ -11,17 +11,6 @@ export default function Header() {
           <Link href="/" className="text-xl font-bold">
             SKHUni
           </Link>
-          <nav className="flex gap-8">
-            <Link href="/about" className="px-2 py-1 rounded-md hover:bg-gray-100">
-              About
-            </Link>
-            <Link href="/projects" className="px-2 py-1 rounded-md hover:bg-gray-100">
-              Project
-            </Link>
-            <Link href="/member" className="px-2 py-1 rounded-md hover:bg-gray-100">
-              Member
-            </Link>
-          </nav>
         </div>
         <div className="flex items-center">
           <LoginButton />

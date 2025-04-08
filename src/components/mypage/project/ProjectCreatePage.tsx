@@ -4,7 +4,6 @@ import { ProjectCreate } from '@/types/projects';
 import { useState } from 'react';
 import { createProject } from '@/apis/projects';
 import { useRouter } from 'next/navigation';
-
 export default function ProjectCreatePage() {
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);

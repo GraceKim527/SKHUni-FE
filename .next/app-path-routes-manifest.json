@@ -1,11 +1,11 @@
 {
   "/_not-found/page": "/_not-found",
-  "/login/page": "/login",
   "/member/[id]/page": "/member/[id]",
   "/member/page": "/member",
+  "/login/page": "/login",
   "/mypage/edit/page": "/mypage/edit",
-  "/mypage/page": "/mypage",
   "/mypage/project/[id]/edit/page": "/mypage/project/[id]/edit",
   "/mypage/project/new/page": "/mypage/project/new",
+  "/mypage/page": "/mypage",
   "/page": "/"
 }
