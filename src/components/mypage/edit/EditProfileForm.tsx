@@ -260,6 +260,7 @@ export const EditProfileForm = () => {
                     setUserInfo({ ...userInfo, introduction: value });
                   }
                 }}
+                placeholder="자기소개를 입력해주세요"
               />
             </div>
 

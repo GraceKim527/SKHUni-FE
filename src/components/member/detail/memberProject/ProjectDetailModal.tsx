@@ -59,9 +59,26 @@ export const ProjectDetailModal = ({ isOpen, onClose, project }: ProjectDetailMo
 
                   <div className="flex flex-col gap-1">
                     <div className="flex gap-3">
-                      <a href={project.githubLink1} target="_blank" rel="noopener noreferrer">
-                        <Image src="/assets/icons/github.svg" alt="깃허브" width={32} height={32} />
-                      </a>
+                      {project.githubLink1 && (
+                        <a href={project.githubLink1} target="_blank" rel="noopener noreferrer">
+                          <Image
+                            src="/assets/icons/github.svg"
+                            alt="깃허브"
+                            width={32}
+                            height={32}
+                          />
+                        </a>
+                      )}
+                      {project.githubLink2 && (
+                        <a href={project.githubLink2} target="_blank" rel="noopener noreferrer">
+                          <Image
+                            src="/assets/icons/github.svg"
+                            alt="깃허브"
+                            width={32}
+                            height={32}
+                          />
+                        </a>
+                      )}
                     </div>
                   </div>
 

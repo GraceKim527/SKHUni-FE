@@ -71,15 +71,15 @@ export const MyProfile = ({ userInfo }: MyProfileProps) => {
         </div>
       </div>
       <div className="flex flex-col gap-2">
-        <h3 className="text-lg font-semibold text-gray-900">한줄 소개</h3>
+        <h3 className="text-sm font-semibold text-gray-700">한줄 소개</h3>
         <p className="text-sm text-gray-500">{userInfo?.introLine ?? '소개글이 없습니다.'}</p>
       </div>
       <div className="flex flex-col gap-2">
-        <h3 className="text-lg font-semibold text-gray-900">자기소개</h3>
+        <h3 className="text-sm font-semibold text-gray-700">자기소개</h3>
         <MarkdownPreview content={userInfo?.introduction ?? '자기소개가 없습니다.'} />
       </div>
       <div className="flex flex-col gap-2">
-        <h3 className="text-lg font-semibold text-gray-900">기술 스택</h3>
+        <h3 className="text-sm font-semibold text-gray-700">기술 스택</h3>
         <div className="flex gap-2">
           {userInfo?.techStack ? (
             userInfo?.techStack
@@ -99,7 +99,7 @@ export const MyProfile = ({ userInfo }: MyProfileProps) => {
         </div>
       </div>
       <div className="flex flex-col gap-2">
-        <h3 className="text-lg font-semibold text-gray-900">링크</h3>
+        <h3 className="text-sm font-semibold text-gray-700">링크</h3>
         <div className="flex gap-2">
           {socialLinks
             .filter((link) => link.url?.trim())
@@ -117,7 +117,7 @@ export const MyProfile = ({ userInfo }: MyProfileProps) => {
       </div>
 
       <div className="flex flex-col gap-2">
-        <h3 className="text-lg font-semibold text-gray-900">외부 컨택 여부</h3>
+        <h3 className="text-sm font-semibold text-gray-700">외부 컨택 여부</h3>
         <div className="flex gap-4">
           <div className="flex gap-1 items-center">
             <p className="text-base">커피챗 오픈 여부</p>

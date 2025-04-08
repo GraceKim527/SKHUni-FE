@@ -21,6 +21,14 @@
         "nxtPid": "nxtPid"
       },
       "namedRegex": "^/member/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/mypage/project/[id]/edit",
+      "regex": "^/mypage/project/([^/]+?)/edit(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/mypage/project/(?<nxtPid>[^/]+?)/edit(?:/)?$"
     }
   ],
   "staticRoutes": [
@@ -59,6 +67,12 @@
       "regex": "^/mypage/edit(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/mypage/edit(?:/)?$"
+    },
+    {
+      "page": "/mypage/project/new",
+      "regex": "^/mypage/project/new(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/mypage/project/new(?:/)?$"
     }
   ],
   "dataRoutes": [],

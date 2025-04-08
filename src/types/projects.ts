@@ -18,3 +18,13 @@ export interface ProjectList {
     totalItems: number;
   };
 }
+
+export interface ProjectCreate {
+  title: string;
+  introLine: string;
+  introduction: string;
+  siteLink: string;
+  githubLink1: string;
+  githubLink2: string;
+  picture: string;
+}

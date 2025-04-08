@@ -5,9 +5,10 @@ import 'md-editor-rt/lib/style.css';
 interface MarkDownEditorProps {
   value: string;
   onChange: (value: string) => void;
+  placeholder: string;
 }
 
-export const MarkDownEditor = ({ value, onChange }: MarkDownEditorProps) => {
+export const MarkDownEditor = ({ value, onChange, placeholder }: MarkDownEditorProps) => {
   config({
     editorConfig: {
       languageUserDefined: {
@@ -30,7 +31,7 @@ export const MarkDownEditor = ({ value, onChange }: MarkDownEditorProps) => {
       language="ko-KR"
       toolbars={['bold', 'italic', 'underline', 'title', 'link', 'table', 'preview']}
       showToolbarName
-      placeholder="자신을 소개하는 내용을 입력해주세요 "
+      placeholder={placeholder}
     />
   );
 };
