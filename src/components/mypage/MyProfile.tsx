@@ -80,7 +80,7 @@ export const MyProfile = ({ userInfo }: MyProfileProps) => {
       </div>
       <div className="flex flex-col gap-2">
         <h3 className="text-sm font-semibold text-gray-700">기술 스택</h3>
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2 w-full">
           {userInfo?.techStack ? (
             userInfo?.techStack
               .split(',')

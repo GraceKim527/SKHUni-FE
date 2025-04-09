@@ -7,7 +7,7 @@ export const MemberCardVertical = ({ member }: { member: UserInfo }) => {
 
   return (
     <div
-      className="flex flex-col items-center p-4 bg-gray-50 rounded-lg shadow-md transition-shadow cursor-pointer hover:shadow-lg"
+      className="flex flex-col gap-4 items-center p-4 bg-gray-50 rounded-lg shadow-md transition-shadow cursor-pointer hover:shadow-lg"
       onClick={() => {
         router.push(`/member/${member.memberId}`);
       }}

@@ -24,11 +24,11 @@ export default function MyPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // 역할 정보 가져오기
-        await fetchRole();
+        await fetchRole(); // 최신 role 불러오기
 
-        // 역할이 ROLE_STUDENT인 경우에만 사용자 정보 가져오기
-        if (role === 'ROLE_STUDENT') {
+        const latestRole = useAuthStore.getState().role;
+
+        if (latestRole === 'ROLE_STUDENT') {
           const response = await getUserInfo();
           setUserInfo(response.data);
           const projectsResponse = await getMyProjects();
@@ -42,7 +42,7 @@ export default function MyPage() {
     };
 
     fetchData();
-  }, [fetchRole, role]);
+  }, [role]);
 
   const handleDeleteProject = async (projectId: number) => {
     try {
@@ -121,7 +121,13 @@ export default function MyPage() {
             )}
           </div>
           {isOpen && (
-            <VerifyModal onClose={() => setIsOpen(false)} onSuccess={() => setIsOpen(false)} />
+            <VerifyModal
+              onClose={() => setIsOpen(false)}
+              onSuccess={() => {
+                setIsOpen(false);
+                fetchRole();
+              }}
+            />
           )}
         </>
       )}

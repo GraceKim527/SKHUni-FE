@@ -4,35 +4,52 @@ import { exchangeToken } from '@/apis/auth';
 import { SocialLoginButton } from '@/components/auth/SocialLoginButton';
 import { useAuthStore } from '@/store/useAuthStore';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import LoadingSpinner from '@/components/common/LoadingSpinner';
 
 export default function Login() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const code = searchParams.get('code');
-  let provider = '';
 
-  if (typeof window !== 'undefined') {
-    provider = localStorage.getItem('provider') || '';
-  }
+  const [isLoading, setIsLoading] = useState(false);
+  const [provider, setProvider] = useState('');
 
   useEffect(() => {
-    if (!code) return;
+    if (typeof window !== 'undefined') {
+      const savedProvider = localStorage.getItem('provider') || '';
+      setProvider(savedProvider);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!code || !provider) return;
 
     const fetchToken = async () => {
+      setIsLoading(true);
       try {
         const { accessToken, refreshToken } = await exchangeToken(provider, code);
         useAuthStore.getState().setTokens({ accessToken, refreshToken });
-        useAuthStore.getState().fetchRole();
-        useAuthStore.getState().fetchUserInfo();
+        await useAuthStore.getState().fetchRole();
+        await useAuthStore.getState().fetchUserInfo();
         router.push('/');
       } catch (error) {
         console.error(error);
+      } finally {
+        setIsLoading(false);
       }
     };
 
     fetchToken();
-  }, [code]);
+  }, [code, provider]);
+
+  if (isLoading) {
+    return (
+      <section className="flex justify-center items-center h-[70vh]">
+        <LoadingSpinner />
+      </section>
+    );
+  }
 
   return (
     <section className="flex flex-col w-[24.375rem] justify-center mx-auto mt-16 gap-6">
