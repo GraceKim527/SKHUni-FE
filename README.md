@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SKHUni ✨
 
-## Getting Started
+성공회대 IT 커뮤니티 플랫폼, 스쿠니(SKHUni)
 
-First, run the development server:
+> 연결, 공유, 성장의 시작점  
+> "커피챗부터 코드리뷰까지, 성공회대 개발자들의 실질적 연결을 만듭니다."
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧩 주요 기능
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### ✅ 역할 기반 권한 관리
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 인증 상태에 따라 권한 및 화면 분기 (게스트 / 재학생 등)
+- 재학생 인증 시 다양한 기능 활성화
 
-## Learn More
+### 🧑‍💻 프로필 기반 네트워킹
 
-To learn more about Next.js, take a look at the following resources:
+- 기술 스택, 프로젝트, 한 줄 소개 기반의 프로필 카드
+- Markdown 기반 자유로운 자기소개
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### ☕ 커피챗 & 코드리뷰 요청 기능
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- 상대방의 공개 여부에 따라 버튼 활성화
+- 요청 시 모달 UI로 메시지 전달
 
-## Deploy on Vercel
+### 📂 프로젝트 공유 기능
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- 썸네일, 링크, 설명 기반의 카드 형식 프로젝트 등록
+- Markdown 기반 상세 소개 작성 가능
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## ⚙️ 사용 기술 스택
+
+### 프론트엔드
+
+![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
+![Zustand](https://img.shields.io/badge/Zustand-7749BD?style=flat&logo=Zulip&logoColor=white)
+![Axios](https://img.shields.io/badge/Axios-5A29E4?style=flat&logo=axios&logoColor=white)
+![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=flat&logo=eslint&logoColor=white)
+
+- `React`, `Next.js`, `TypeScript`
+- `Tailwind CSS` for styling
+- `Zustand` for global state
+- `Axios`, `ESLint`, `md-editor-rt` 등
+
+### 백엔드
+
+- `Java + Spring Boot`
+- `MySQL`, `Swagger`
+- `GCP (Ubuntu + Nginx + SSL)`
+- `Google / Kakao OIDC`, `JWT 기반 인증`
+
+---
+
+## 👩🏻‍💻 Developer
+
+### Front-End
+
+|          [김은혜](https://github.com/gracekim527)          |
+| :--------------------------------------------------------: |
+| <img src="https://github.com/gracekim527.png" width="150"> |
+
+### Back-End
+
+|          [최기웅](https://github.com/giwoong01)          |
+| :------------------------------------------------------: |
+| <img src="https://github.com/giwoong01.png" width="150"> |
