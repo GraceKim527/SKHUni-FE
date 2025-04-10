@@ -6,11 +6,15 @@ import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { AbleBadge } from '@/components/common/AbleBadge';
 import { RequestModal } from './RequestModal';
+import { useAuthStore } from '@/store/useAuthStore';
+
 export default function MemberBasicInfo({ member }: { member: UserInfo }) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<'커피챗 요청' | '코드리뷰 요청' | null>(
     null
   );
+  const role = useAuthStore((state) => state.role);
+  const isGuest = role === 'ROLE_GUEST';
 
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -25,6 +29,10 @@ export default function MemberBasicInfo({ member }: { member: UserInfo }) {
   }, []);
 
   const handleSelect = (option: string) => {
+    if (isGuest) {
+      alert('로그인 후 이용 가능해요.');
+      return;
+    }
     if (
       (option === '커피챗 요청' && !member.coffeeChatOpen) ||
       (option === '코드리뷰 요청' && !member.codeReviewOpen)
