@@ -55,7 +55,7 @@ export default function Home() {
           <LoadingSpinner />
         </div>
       ) : (
-        <section className="flex flex-col w-full lg:w-[70rem]">
+        <section className="flex flex-col w-full lg:w-[70rem] px-4">
           <UserCountBanner count={members.length} />
           <div className="flex flex-col gap-16">
             <MemberPreviewSection type="coffeeChat" members={coffeeChatMembers} />

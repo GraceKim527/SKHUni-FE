@@ -70,19 +70,6 @@
       "static/chunks/9342-99eedc98c174e3d1.js",
       "static/chunks/app/mypage/page-9220713d9c1f9978.js"
     ],
-    "/mypage/project/[id]/edit/page": [
-      "static/chunks/webpack-b93fbcbddf3e11ad.js",
-      "static/chunks/4bd1b696-90f4f43008972db0.js",
-      "static/chunks/1684-6b86760811c0d4dd.js",
-      "static/chunks/main-app-2a68bc32f6aaa83f.js",
-      "static/css/2b789b269084e80f.css",
-      "static/chunks/363642f4-e1a45601aaa1fb01.js",
-      "static/chunks/9155-b2ebd342348c2416.js",
-      "static/chunks/6874-775986ec9a6e7c53.js",
-      "static/chunks/4405-614f1eca25d74441.js",
-      "static/chunks/9896-f2985a7886d671a4.js",
-      "static/chunks/app/mypage/project/[id]/edit/page-859bb4366d84feda.js"
-    ],
     "/mypage/project/new/page": [
       "static/chunks/webpack-b93fbcbddf3e11ad.js",
       "static/chunks/4bd1b696-90f4f43008972db0.js",
@@ -96,6 +83,19 @@
       "static/chunks/9896-f2985a7886d671a4.js",
       "static/chunks/app/mypage/project/new/page-6f499ff8e86d38d6.js"
     ],
+    "/mypage/project/[id]/edit/page": [
+      "static/chunks/webpack-b93fbcbddf3e11ad.js",
+      "static/chunks/4bd1b696-90f4f43008972db0.js",
+      "static/chunks/1684-6b86760811c0d4dd.js",
+      "static/chunks/main-app-2a68bc32f6aaa83f.js",
+      "static/css/2b789b269084e80f.css",
+      "static/chunks/363642f4-e1a45601aaa1fb01.js",
+      "static/chunks/9155-b2ebd342348c2416.js",
+      "static/chunks/6874-775986ec9a6e7c53.js",
+      "static/chunks/4405-614f1eca25d74441.js",
+      "static/chunks/9896-f2985a7886d671a4.js",
+      "static/chunks/app/mypage/project/[id]/edit/page-859bb4366d84feda.js"
+    ],
     "/page": [
       "static/chunks/webpack-b93fbcbddf3e11ad.js",
       "static/chunks/4bd1b696-90f4f43008972db0.js",
@@ -103,7 +103,7 @@
       "static/chunks/main-app-2a68bc32f6aaa83f.js",
       "static/chunks/9155-b2ebd342348c2416.js",
       "static/chunks/6874-775986ec9a6e7c53.js",
-      "static/chunks/app/page-3226b4192b8b5595.js"
+      "static/chunks/app/page-c16d9eb3a445d8aa.js"
     ]
   }
 }
