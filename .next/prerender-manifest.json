@@ -1,30 +1,6 @@
 {
   "version": 4,
   "routes": {
-    "/member": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/member",
-      "dataRoute": "/member.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/mypage/edit": {
       "experimentalBypassFor": [
         {
@@ -64,6 +40,30 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/mypage",
       "dataRoute": "/mypage.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/mypage/project/new": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/mypage/project/new",
+      "dataRoute": "/mypage/project/new.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -121,7 +121,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/mypage/project/new": {
+    "/member": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -134,8 +134,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/mypage/project/new",
-      "dataRoute": "/mypage/project/new.rsc",
+      "srcRoute": "/member",
+      "dataRoute": "/member.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -149,8 +149,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "7b603176e9f0df8184c594c3eefc61af",
-    "previewModeSigningKey": "5db6691c034624604beccb326557d91f6f5ee7fbe1576ee172963df31179e047",
-    "previewModeEncryptionKey": "c66f8314464e660bb0f072815f67c457a0409341a378a14106fd9db3e1550cc5"
+    "previewModeId": "44859bb13d86e9392c73001de441e75f",
+    "previewModeSigningKey": "9b48a5522b7cbb8ff48336dd59fb10914f90a2a53a1859eea89a0072478b0425",
+    "previewModeEncryptionKey": "2d12c8685adfd58513093826a436e37b5a3de054745c2c2b22f7c0e76e29a0cb"
   }
 }

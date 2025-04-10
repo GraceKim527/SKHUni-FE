@@ -4,8 +4,15 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import AuthInitializer from '@/components/auth/AuthInitializer';
 export const metadata: Metadata = {
-  title: 'SKHUni',
-  description: '성공회대 IT 커뮤니티를 책임지는 SKHUni',
+  title: 'SKHUni | 성공회대 IT 커뮤니티',
+  description: '성공회대 IT 학우들과 함께 성장하는 커뮤니티 플랫폼',
+  openGraph: {
+    title: '스쿠니 | 성공회대 IT 커뮤니티',
+    description: '성공회대 IT 학우들과 함께 성장하는 커뮤니티 플랫폼',
+    images: ['https://skhuni.vercel.app/og-image.png'],
+    url: 'https://skhuni.vercel.app/',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
