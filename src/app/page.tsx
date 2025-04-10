@@ -25,11 +25,11 @@ export default function Home() {
   const getRandomMembers = (type: 'coffeeChat' | 'codeReview', count: number) => {
     if (members.length === 0) return [];
     if (type === 'coffeeChat') {
-      const coffeeChatMembers = members.filter((member) => member.codeReviewOpen === false);
+      const coffeeChatMembers = members.filter((member) => member.codeReviewOpen === true);
       const shuffled = [...coffeeChatMembers].sort(() => 0.5 - Math.random());
       return shuffled.slice(0, count);
     } else {
-      const codeReviewMembers = members.filter((member) => member.coffeeChatOpen === false);
+      const codeReviewMembers = members.filter((member) => member.coffeeChatOpen === true);
       const shuffled = [...codeReviewMembers].sort(() => 0.5 - Math.random());
       return shuffled.slice(0, count);
     }
