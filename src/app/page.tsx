@@ -22,13 +22,21 @@ export default function Home() {
   }, []);
 
   // 랜덤으로 5명의 멤버 선택
-  const getRandomMembers = (count: number) => {
-    const shuffled = [...members].sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, count);
+  const getRandomMembers = (type: 'coffeeChat' | 'codeReview', count: number) => {
+    if (members.length === 0) return [];
+    if (type === 'coffeeChat') {
+      const coffeeChatMembers = members.filter((member) => member.codeReviewOpen === false);
+      const shuffled = [...coffeeChatMembers].sort(() => 0.5 - Math.random());
+      return shuffled.slice(0, count);
+    } else {
+      const codeReviewMembers = members.filter((member) => member.coffeeChatOpen === false);
+      const shuffled = [...codeReviewMembers].sort(() => 0.5 - Math.random());
+      return shuffled.slice(0, count);
+    }
   };
 
-  const coffeeChatMembers = getRandomMembers(5);
-  const codeReviewMembers = getRandomMembers(5);
+  const coffeeChatMembers = getRandomMembers('coffeeChat', 5);
+  const codeReviewMembers = getRandomMembers('codeReview', 5);
 
   return (
     <div className="flex flex-col justify-center items-center mb-16">
