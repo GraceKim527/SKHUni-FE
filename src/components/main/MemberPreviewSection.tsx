@@ -3,7 +3,7 @@ import { MemberCardVertical } from './MemberCardVertical';
 import Link from 'next/link';
 import Image from 'next/image';
 interface MemberPreviewSectionProps {
-  type: 'coffeeChat' | 'codeReview';
+  type: 'coffeeChat' | 'codeReview' | 'random';
   members: UserInfo[];
 }
 
@@ -11,7 +11,11 @@ export const MemberPreviewSection = ({ type, members }: MemberPreviewSectionProp
   return (
     <section className="flex flex-col gap-4 w-full">
       <h2 className="text-lg font-bold text-gray-900">
-        {type === 'coffeeChat' ? '커피챗 신청 가능한 학우' : '코드리뷰 신청 가능한 학우'}
+        {type === 'coffeeChat'
+          ? '커피챗 신청 가능한 학우'
+          : type === 'codeReview'
+          ? '코드리뷰 신청 가능한 학우'
+          : '랜덤 추천 학우'}
       </h2>
       <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-5">
         {members.map((member) => (

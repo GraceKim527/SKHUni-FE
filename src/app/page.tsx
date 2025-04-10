@@ -21,9 +21,14 @@ export default function Home() {
     fetchMembers();
   }, []);
 
-  // 커피챗 및 코드리뷰 가능자 멤버 일부 조회
-  const coffeeChatMembers = members.filter((m) => m.coffeeChatOpen).slice(0, 4);
-  const codeReviewMembers = members.filter((m) => m.codeReviewOpen).slice(0, 4);
+  // 랜덤으로 5명의 멤버 선택
+  const getRandomMembers = (count: number) => {
+    const shuffled = [...members].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+  };
+
+  const coffeeChatMembers = getRandomMembers(5);
+  const codeReviewMembers = getRandomMembers(5);
 
   return (
     <div className="flex flex-col justify-center items-center mb-16">
