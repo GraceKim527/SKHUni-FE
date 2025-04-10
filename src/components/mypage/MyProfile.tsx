@@ -26,7 +26,7 @@ export const MyProfile = ({ userInfo }: MyProfileProps) => {
 
   return (
     <div className="flex flex-col gap-10 justify-between">
-      <div className="flex gap-8">
+      <div className="flex flex-col gap-4 sm:flex-row sm:gap-8">
         <img
           src={userInfo?.picture ?? '/assets/img/profile.png'}
           alt="profile"
@@ -34,7 +34,7 @@ export const MyProfile = ({ userInfo }: MyProfileProps) => {
           height={120}
           className="object-cover w-24 h-24 rounded-full"
         />
-        <div className="flex justify-between w-[400px]">
+        <div className="flex justify-between w-full sm:w-[400px]">
           <div className="flex flex-col gap-2">
             <h3 className="text-lg font-bold text-gray-700">{userInfo?.name}</h3>
             <div className="flex flex-col gap-1">

@@ -33,7 +33,7 @@ export default function Dropdown({
   }, []);
 
   return (
-    <div ref={ref} className="flex relative flex-col gap-1 w-full max-w-xs">
+    <div ref={ref} className="flex relative flex-col gap-1 w-full">
       <label className="text-xs text-gray-700">{label}</label>
       <button
         type="button"

@@ -34,16 +34,19 @@ export const MemberFilterBar = ({ filters, setFilters }: MemberFilterBarProps) =
   };
 
   return (
-    <div className="flex gap-4 justify-between">
-      <div className="flex gap-4">
-        <FieldDropdown
-          selected={filters.field}
-          onSelect={(field) => setFilters({ ...filters, field })}
-        />
-        <EnrollmentStatusDropdown
-          selected={filters.enrollmentStatus}
-          onSelect={(status) => setFilters({ ...filters, enrollmentStatus: status })}
-        />
+    <div className="flex flex-col gap-4 justify-between sm:flex-row">
+      <div className="flex flex-col not-only-of-type:gap-4 md:flex-row">
+        <div className="flex gap-4">
+          <FieldDropdown
+            selected={filters.field}
+            onSelect={(field) => setFilters({ ...filters, field })}
+          />
+          <EnrollmentStatusDropdown
+            selected={filters.enrollmentStatus}
+            onSelect={(status) => setFilters({ ...filters, enrollmentStatus: status })}
+          />
+        </div>
+
         <ToggleFilters
           coffeeChat={filters.coffeeChat}
           codeReview={filters.codeReview}

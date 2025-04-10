@@ -31,6 +31,7 @@ export interface UserInfo {
   linkedIn: string;
   etc1: string;
   etc2: string;
+  isMine: boolean;
 }
 
 export interface MemberList {

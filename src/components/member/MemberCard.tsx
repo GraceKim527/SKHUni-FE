@@ -16,7 +16,7 @@ export const MemberCard = ({ member }: MemberCardProps) => {
         width={100}
         height={100}
         style={{ width: '100px', height: '100px' }}
-        className="rounded-full"
+        className="object-cover rounded-full"
       />
       <div className="flex flex-col gap-2">
         <div className="flex gap-2 items-center">
@@ -31,7 +31,9 @@ export const MemberCard = ({ member }: MemberCardProps) => {
             {FIELD_LABELS[member.fieldType as Field] || '분야 미정'}
           </p>
         </div>
-        <p className="text-sm text-gray-500">{member.introLine || '한줄소개가 없습니다'}</p>
+        <p className="text-sm text-gray-500 line-clamp-2">
+          {member.introLine || '한줄소개가 없습니다'}
+        </p>
 
         <div className="flex gap-2">
           <AbleBadge able={member.coffeeChatOpen} type="coffee" />

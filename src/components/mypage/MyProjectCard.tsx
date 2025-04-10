@@ -16,8 +16,8 @@ export const MyProjectCard = ({ project, onDelete }: MyProjectCardProps) => {
 
   return (
     <>
-      <div className="flex gap-4 justify-between w-full">
-        <div className="w-[11.25rem] h-[6.25rem] flex-shrink-0">
+      <div className="flex flex-col gap-4 justify-between w-full sm:flex-row">
+        <div className="w-full h-[12rem] sm:w-[11.25rem] sm:h-[6.25rem] flex-shrink-0">
           <img
             src={project.picture}
             alt={project.title}

@@ -69,7 +69,7 @@ export const MemberListPage = () => {
         ))}
         {memberList.members.length === 0 && (
           <div className="flex justify-center items-center h-full">
-            <p className="text-gray-500">검색 결과가 없습니다.</p>
+            <p className="text-gray-500">결과가 없습니다.</p>
           </div>
         )}
       </div>

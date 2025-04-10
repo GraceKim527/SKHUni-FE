@@ -25,17 +25,24 @@ export default function Home() {
   const coffeeChatMembers = members.filter((m) => m.coffeeChatOpen).slice(0, 4);
   const codeReviewMembers = members.filter((m) => m.codeReviewOpen).slice(0, 4);
 
-  console.log(codeReviewMembers, coffeeChatMembers);
-
   return (
     <div className="flex flex-col justify-center items-center mb-16">
-      <Image src="/assets/img/skhuni_banner.png" alt="logo" width={1920} height={600} />
+      <div className="w-full h-[20rem] relative md:h-[30rem]">
+        <Image
+          src="/assets/img/skhuni_banner.png"
+          alt="logo"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+
       {isLoading ? (
         <div className="flex justify-center items-center h-[40vh]">
           <LoadingSpinner />
         </div>
       ) : (
-        <section className="flex flex-col w-[70rem]">
+        <section className="flex flex-col w-full lg:w-[70rem]">
           <UserCountBanner count={members.length} />
           <div className="flex flex-col gap-16">
             <MemberPreviewSection type="coffeeChat" members={coffeeChatMembers} />

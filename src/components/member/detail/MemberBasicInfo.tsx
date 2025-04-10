@@ -57,8 +57,8 @@ export default function MemberBasicInfo({ member }: { member: UserInfo }) {
   ];
 
   return (
-    <div className="flex gap-8 justify-between p-8 bg-white rounded-lg border border-gray-300">
-      <div className="flex gap-8 items-center">
+    <div className="flex justify-between p-4 w-full bg-white rounded-lg border border-gray-300 md:w-auto md:gap-8 sm:px-8 sm:py-6">
+      <div className="flex flex-col gap-8 items-center w-full md:flex-row md:w-auto">
         <div className="flex flex-col gap-4">
           <img src={member.picture} alt="member-profile" className="w-32 h-32 rounded-full" />
         </div>
@@ -103,13 +103,16 @@ export default function MemberBasicInfo({ member }: { member: UserInfo }) {
         </div>
       </div>
       <div className="relative" ref={dropdownRef}>
-        <button
-          type="button"
-          className="relative w-24 h-10 bg-[#512DA8] text-white rounded-lg"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          Contact
-        </button>
+        {!member.isMine && (
+          <button
+            type="button"
+            className="relative w-24 h-10 bg-[#512DA8] text-white rounded-lg"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            Contact
+          </button>
+        )}
+
         {isOpen && (
           <ul className="absolute right-0 top-12 z-10 p-1 mt-1 w-40 bg-white rounded-lg border border-gray-300 shadow-sm">
             {['커피챗 요청', '코드리뷰 요청'].map((option) => {

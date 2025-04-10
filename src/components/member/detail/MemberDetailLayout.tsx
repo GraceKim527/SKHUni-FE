@@ -34,7 +34,7 @@ export default function MemberDetailLayout() {
     );
 
   return (
-    <section className="flex flex-col w-[60rem] justify-center mx-auto mt-8 gap-4">
+    <section className="flex flex-col w-full justify-center mx-auto mt-8 gap-4 lg:w-[60rem] px-4">
       <BackLink href="/member" />
       <div className="flex flex-col gap-16 justify-center mx-auto w-full">
         <div className="flex flex-col gap-4">

@@ -6,7 +6,7 @@ interface MemberStackInfoProps {
 
 export default function MemberStackInfo({ member }: MemberStackInfoProps) {
   return (
-    <div className="flex flex-col gap-2 justify-between px-8 py-6 bg-white rounded-lg border border-gray-300">
+    <div className="flex flex-col gap-2 justify-between p-4 bg-white rounded-lg border border-gray-300 sm:px-8 sm:py-6">
       <h3 className="text-sm font-semibold text-gray-900">기술 스택</h3>
       <div className="flex flex-wrap gap-2">
         {member.techStack ? (

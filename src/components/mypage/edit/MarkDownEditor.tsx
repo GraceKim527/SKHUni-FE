@@ -32,6 +32,7 @@ export const MarkDownEditor = ({ value, onChange, placeholder }: MarkDownEditorP
       toolbars={['bold', 'italic', 'underline', 'title', 'link', 'table', 'preview']}
       showToolbarName
       placeholder={placeholder}
+      preview={false}
     />
   );
 };

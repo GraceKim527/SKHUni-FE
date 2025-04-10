@@ -54,7 +54,7 @@ export default function MyPage() {
   };
 
   return (
-    <section className="flex flex-col w-[35rem] justify-center mx-auto mt-8 gap-8">
+    <section className="flex flex-col w-full justify-center mx-auto mt-8 gap-8 sm:w-[35rem] px-4">
       {isLoading && (
         <div className="flex justify-center items-center h-[20rem]">
           <LoadingSpinner />

@@ -119,7 +119,7 @@ export const EditProfileForm = () => {
       )}
       {!isLoading && (
         <>
-          <div className="flex justify-between">
+          <div className="flex flex-col gap-6 sm:flex-row sm:justify-between">
             <div className="flex flex-col gap-6">
               <img
                 src={previewImage ?? userInfo?.picture ?? '/assets/img/profile.png'}
@@ -131,7 +131,7 @@ export const EditProfileForm = () => {
 
               <label
                 htmlFor="profileImage"
-                className="flex gap-2 items-center h-6 bg-[#F5F5F5] rounded-md p-1 justify-center cursor-pointer"
+                className="flex gap-2 items-center w-[8rem] h-6 bg-[#F5F5F5] rounded-md p-1 justify-center cursor-pointer sm:w-full"
               >
                 <Image src="/assets/icons/folderImg.svg" alt="folderImg" width={16} height={16} />
                 <span className="text-xs text-gray-700">프로필 수정</span>
@@ -144,7 +144,7 @@ export const EditProfileForm = () => {
                 className="hidden"
               />
             </div>
-            <div className="flex flex-col gap-4 w-[450px]">
+            <div className="flex flex-col gap-4 w-full sm:w-[450px]">
               <InputField
                 label="이름"
                 type="text"
@@ -179,8 +179,8 @@ export const EditProfileForm = () => {
             </div>
           </div>
           <div className="flex flex-col gap-8">
-            <div className="flex justify-between">
-              <div className="w-[10rem]">
+            <div className="flex flex-col gap-4 sm:flex-row sm:justify-between">
+              <div className="w-full sm:w-[10rem]">
                 <InputField
                   label="학번"
                   type="text"
@@ -194,7 +194,7 @@ export const EditProfileForm = () => {
                   }}
                 />
               </div>
-              <div className="w-[10rem]">
+              <div className="w-full sm:w-[10rem]">
                 <Dropdown
                   label="재학 상태"
                   options={ENROLLMENT_STATUS_OPTIONS.map((option) => option.label)}
@@ -219,7 +219,7 @@ export const EditProfileForm = () => {
                   placeholder="재학 상태"
                 />
               </div>
-              <div className="w-[16rem]">
+              <div className="w-full sm:w-[16rem]">
                 <Dropdown
                   label="분야"
                   options={FIELD_OPTIONS.map((option) => option.label)}

@@ -16,7 +16,7 @@ export default function LoginButton() {
   return isLoggedIn ? (
     <div className="flex gap-8 items-center">
       <div className="flex gap-4 items-center">
-        <p className="text-base">
+        <p className="hidden text-base md:block">
           <b>{userInfo.name}</b>님 안녕하세요!
         </p>
         <Link href="/mypage">
