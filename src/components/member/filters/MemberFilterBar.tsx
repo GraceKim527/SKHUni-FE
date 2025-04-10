@@ -13,7 +13,7 @@ interface MemberFilterBarProps {
     enrollmentStatus: EnrollmentStatus | undefined;
     coffeeChat: boolean;
     codeReview: boolean;
-    page: number;
+    page?: number;
   };
   setFilters: (filters: MemberFilterBarProps['filters']) => void;
 }

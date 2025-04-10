@@ -24,7 +24,7 @@ export default function Pagination({
       <button
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        className="px-3 py-1 rounded-md border disabled:opacity-30"
+        className="px-3 py-1 rounded-md border border-gray-500 disabled:opacity-30"
       >
         이전
       </button>
@@ -33,9 +33,12 @@ export default function Pagination({
         <button
           key={page}
           onClick={() => onPageChange(page)}
-          className={`px-3 py-1 rounded-md border ${
-            page === currentPage ? 'bg-primary text-white' : 'hover:bg-gray-100'
-          }`}
+          className={`px-3 py-1 rounded-md border transition-all duration-200
+      ${
+        page === currentPage
+          ? 'bg-[#512DA8] text-white border-[#512DA8]'
+          : 'text-gray-700 border-gray-300 hover:bg-gray-100 hover:border-gray-400'
+      }`}
         >
           {page}
         </button>
@@ -44,7 +47,7 @@ export default function Pagination({
       <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className="px-3 py-1 rounded-md border disabled:opacity-30"
+        className="px-3 py-1 rounded-md border border-gray-500 disabled:opacity-30"
       >
         다음
       </button>
