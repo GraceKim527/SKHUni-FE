@@ -14,9 +14,9 @@ export const MyProfile = ({ userInfo }: MyProfileProps) => {
   const socialLinks = [
     { key: 'github', label: 'Github', icon: '/assets/icons/github.svg', url: userInfo?.github },
     {
-      key: 'linkedin',
+      key: 'linkedIn',
       label: 'LinkedIn',
-      icon: '/assets/icons/linkedin.svg',
+      icon: '/assets/icons/linkedIn.svg',
       url: userInfo?.linkedIn,
     },
     { key: 'notion', label: 'Notion', icon: '/assets/icons/notion.svg', url: userInfo?.notion },

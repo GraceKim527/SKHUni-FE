@@ -38,9 +38,9 @@ export default function MemberBasicInfo({ member }: { member: UserInfo }) {
   const socialLinks = [
     { key: 'github', label: 'Github', icon: '/assets/icons/github.svg', url: member.github },
     {
-      key: 'linkedin',
+      key: 'linkedIn',
       label: 'LinkedIn',
-      icon: '/assets/icons/linkedin.svg',
+      icon: '/assets/icons/linkedIn.svg',
       url: member.linkedIn,
     },
     { key: 'notion', label: 'Notion', icon: '/assets/icons/notion.svg', url: member.notion },
