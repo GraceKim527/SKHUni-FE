@@ -283,7 +283,7 @@ export const EditProfileForm = () => {
                 onChange={(value) => setSocialLinks({ ...socialLinks, github: value })}
               />
               <LinkAdd
-                icon="/assets/icons/linkedin.svg"
+                icon="/assets/icons/linkedIn.svg"
                 label="LinkedIn"
                 value={socialLinks.linkedIn}
                 onChange={(value) => setSocialLinks({ ...socialLinks, linkedIn: value })}
