@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import { requestCoffeeChat, requestCodeReview } from '@/apis/members';
+import toast from 'react-hot-toast';
+
 interface RequestModalProps {
   toMemberId: number;
   onClose: () => void;
@@ -14,16 +16,22 @@ export const RequestModal = ({ toMemberId, onClose, type }: RequestModalProps) =
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async () => {
-    if (type === '커피챗 요청') {
-      setIsLoading(true);
-      await requestCoffeeChat(toMemberId, content);
-      setIsLoading(false);
+    setIsLoading(true);
+
+    try {
+      if (type === '커피챗 요청') {
+        await requestCoffeeChat(toMemberId, content);
+        toast.success('🎉 커피챗 요청이 성공적으로 전송되었습니다!');
+      } else {
+        await requestCodeReview(toMemberId, content, githubLink);
+        toast.success('✅ 코드리뷰 요청이 성공적으로 전송되었습니다!');
+      }
       onClose();
-    } else {
-      setIsLoading(true);
-      await requestCodeReview(toMemberId, content, githubLink);
+    } catch (error) {
+      toast.error('😢 요청 중 오류가 발생했습니다. 다시 시도해주세요.');
+      console.error(error);
+    } finally {
       setIsLoading(false);
-      onClose();
     }
   };
 
@@ -68,11 +76,11 @@ export const RequestModal = ({ toMemberId, onClose, type }: RequestModalProps) =
           </div>
         )}
         <button
-          className="p-2 w-full text-white bg-[#512DA8] rounded-md"
+          className="p-2 w-full text-white bg-[#512DA8] rounded-md disabled:opacity-50"
           onClick={handleSubmit}
           disabled={content.length === 0 || isLoading}
         >
-          {isLoading ? '요청중...' : '요청하기'}
+          {isLoading ? '요청 중...' : '요청하기'}
         </button>
       </div>
     </div>

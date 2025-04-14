@@ -5,8 +5,8 @@
   "/member/[id]/page": "app/member/[id]/page.js",
   "/member/page": "app/member/page.js",
   "/mypage/edit/page": "app/mypage/edit/page.js",
-  "/mypage/project/[id]/edit/page": "app/mypage/project/[id]/edit/page.js",
   "/mypage/page": "app/mypage/page.js",
+  "/mypage/project/[id]/edit/page": "app/mypage/project/[id]/edit/page.js",
   "/mypage/project/new/page": "app/mypage/project/new/page.js",
   "/page": "app/page.js"
 }

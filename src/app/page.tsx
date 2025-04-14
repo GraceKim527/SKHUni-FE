@@ -1,7 +1,7 @@
 'use client';
 
 import { getMemberList } from '@/apis/members';
-import { UserInfo } from '@/types/users';
+import { UserInfo, PageInfo } from '@/types/users';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { UserCountBanner } from '@/components/main/UserCountBanner';
@@ -11,13 +11,27 @@ import OnboardingBanner from '@/components/main/OnboardingBanner';
 
 export default function Home() {
   const [members, setMembers] = useState<UserInfo[]>([]);
+  const [pageInfo, setPageInfo] = useState<PageInfo>({
+    currentPage: 0,
+    totalPages: 0,
+    totalItems: 0,
+  });
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const fetchMembers = async () => {
       setIsLoading(true);
-      const response = await getMemberList();
+      const response = await getMemberList(
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        1,
+        50
+      );
       setMembers(response.data.members);
+      setPageInfo(response.data.pageInfo);
       setIsLoading(false);
     };
     fetchMembers();
@@ -59,7 +73,7 @@ export default function Home() {
       ) : (
         <section className="flex flex-col w-full lg:w-[70rem] px-4">
           <OnboardingBanner />
-          <UserCountBanner count={members.length} />
+          <UserCountBanner count={pageInfo.totalItems} />
           <div className="flex flex-col gap-16">
             <MemberPreviewSection type="coffeeChat" members={coffeeChatMembers} />
             <MemberPreviewSection type="codeReview" members={codeReviewMembers} />

@@ -34,11 +34,13 @@ export interface UserInfo {
   isMine: boolean;
 }
 
+export interface PageInfo {
+  currentPage: number;
+  totalPages: number;
+  totalItems: number;
+}
+
 export interface MemberList {
   members: UserInfo[];
-  pageInfo: {
-    currentPage: number;
-    totalPages: number;
-    totalItems: number;
-  };
+  pageInfo: PageInfo;
 }

@@ -3,6 +3,7 @@ import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import AuthInitializer from '@/components/auth/AuthInitializer';
+import { Toaster } from 'react-hot-toast';
 export const metadata: Metadata = {
   title: 'SKHUni | 성공회대 IT 커뮤니티',
   description: '성공회대 IT 학우들과 함께 성장하는 커뮤니티 플랫폼',
@@ -26,6 +27,7 @@ export default function RootLayout({
         <AuthInitializer />
         <Header />
         <main className="mt-[64px] min-h-[calc(100vh-160px)]">{children}</main>
+        <Toaster position="top-center" reverseOrder={false} />
         <Footer />
       </body>
     </html>
