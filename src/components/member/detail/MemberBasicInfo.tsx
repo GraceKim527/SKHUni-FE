@@ -57,7 +57,7 @@ export default function MemberBasicInfo({ member }: { member: UserInfo }) {
   ];
 
   return (
-    <div className="flex justify-between p-4 w-full bg-white rounded-lg border border-gray-300 md:w-auto md:gap-8 sm:px-8 sm:py-6">
+    <div className="flex flex-col justify-between p-4 w-full bg-white rounded-lg border border-gray-300 md:w-auto md:gap-8 md:flex-row sm:px-8 sm:py-6 sm:flex-row">
       <div className="flex flex-col gap-8 items-center w-full md:flex-row md:w-auto">
         <div className="flex flex-col gap-4">
           <img
@@ -115,7 +115,7 @@ export default function MemberBasicInfo({ member }: { member: UserInfo }) {
         {!member.isMine && (
           <button
             type="button"
-            className="relative w-24 h-10 bg-[#512DA8] text-white rounded-lg"
+            className="relative w-full h-10 bg-[#512DA8] text-white rounded-lg md:w-24 md:h-10"
             onClick={() => setIsOpen(!isOpen)}
           >
             Contact

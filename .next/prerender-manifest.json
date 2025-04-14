@@ -121,30 +121,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/",
-      "dataRoute": "/index.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/mypage/project/new": {
       "experimentalBypassFor": [
         {
@@ -168,13 +144,37 @@
         "x-next-revalidated-tags",
         "x-next-revalidate-tag-token"
       ]
+    },
+    "/": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/",
+      "dataRoute": "/index.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
     }
   },
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "5ca7af88899561d0e39b5d1b27a6d403",
-    "previewModeSigningKey": "6b0040aaba07facb5432d2e72b62cb092c0929388a4a50fbd15d1ba2d7183ae1",
-    "previewModeEncryptionKey": "e5d90a9b62f97a11b2fbe76e55954374945a0e238f0490f7515f535716c67f0a"
+    "previewModeId": "aef6e5bed44621d78ed011662cedd13f",
+    "previewModeSigningKey": "066ff69d41754e3e8ac8aa9da518105a7aae9872c6694be05dad14aa2bb7c586",
+    "previewModeEncryptionKey": "6062f85cdf7fadd4dab599d995511379c57e4bd41582bd2729889310a69a94a7"
   }
 }

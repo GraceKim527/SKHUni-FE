@@ -7,6 +7,7 @@ interface TechStack {
   id: string;
   name: string;
 }
+
 interface TechStackDropdownProps {
   stackList: TechStack[];
   value: string[]; // id
@@ -21,6 +22,7 @@ export default function TechStackDropdown({
   placeholder = '기술 스택 선택',
 }: TechStackDropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
   const ref = useRef<HTMLDivElement>(null);
 
   // 외부 클릭 시 드롭다운 닫기
@@ -37,12 +39,19 @@ export default function TechStackDropdown({
   const handleSelect = (stack: string) => {
     if (!value.includes(stack)) {
       onChange([...value, stack]);
+      setSearchTerm(''); // 스택 선택 시 검색어 초기화
     }
   };
 
   const handleRemove = (stack: string) => {
     onChange(value.filter((s) => s !== stack));
   };
+
+  // 검색 필터
+  const filteredStackList = stackList.filter(
+    (stack) =>
+      !value.includes(stack.id) && stack.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div className="flex flex-col gap-1">
@@ -73,19 +82,30 @@ export default function TechStackDropdown({
 
         {/* 드롭다운 목록 */}
         {isOpen && (
-          <ul className="overflow-y-auto absolute z-10 mt-2 w-full max-h-48 bg-white rounded-lg border border-gray-300 shadow-sm">
-            {stackList
-              .filter((stack) => !value.includes(stack.id))
-              .map((stack) => (
-                <li
-                  key={stack.id}
-                  onClick={() => handleSelect(stack.id)}
-                  className="px-4 py-2 text-sm text-gray-700 cursor-pointer hover:bg-gray-100"
-                >
-                  {stack.name}
-                </li>
-              ))}
-          </ul>
+          <div className="absolute z-10 mt-2 w-full bg-white rounded-lg border border-gray-300 shadow-sm">
+            <input
+              type="text"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              placeholder="스택 검색..."
+              className="px-4 py-2 w-full text-sm border-b border-gray-200 outline-none"
+            />
+            <ul className="overflow-y-auto max-h-48">
+              {filteredStackList.length > 0 ? (
+                filteredStackList.map((stack) => (
+                  <li
+                    key={stack.id}
+                    onClick={() => handleSelect(stack.id)}
+                    className="px-4 py-2 text-sm text-gray-700 cursor-pointer hover:bg-gray-100"
+                  >
+                    {stack.name}
+                  </li>
+                ))
+              ) : (
+                <li className="px-4 py-2 text-sm text-gray-400">일치하는 스택이 없습니다.</li>
+              )}
+            </ul>
+          </div>
         )}
       </div>
     </div>

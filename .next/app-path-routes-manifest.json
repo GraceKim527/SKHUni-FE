@@ -5,8 +5,8 @@
   "/member/[id]/page": "/member/[id]",
   "/member/page": "/member",
   "/mypage/edit/page": "/mypage/edit",
+  "/mypage/project/[id]/edit/page": "/mypage/project/[id]/edit",
   "/mypage/page": "/mypage",
   "/mypage/project/new/page": "/mypage/project/new",
-  "/mypage/project/[id]/edit/page": "/mypage/project/[id]/edit",
   "/page": "/"
 }
