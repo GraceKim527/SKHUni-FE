@@ -40,12 +40,14 @@ export const MyProfile = ({ userInfo }: MyProfileProps) => {
             <div className="flex flex-col gap-1">
               <div className="flex gap-2 items-center">
                 <Image src="/assets/icons/mail.svg" alt="mail" width={16} height={17} />
-                <p className="text-sm leading-none text-gray-700">{userInfo?.email}</p>
+                <p className="text-sm leading-none text-gray-700">
+                  {userInfo?.contactEmail || '이메일 미공개'}
+                </p>
               </div>
               <div className="flex gap-2 items-center">
                 <Image src="/assets/icons/school.svg" alt="학번" width={16} height={16} />
                 <h6 className="text-sm font-normal leading-none text-gray-700">
-                  {userInfo?.studentId}학번 (
+                  {userInfo?.studentId ? `${userInfo?.studentId}학번` : '학번 미공개'} (
                   {
                     ENROLLMENT_STATUS_LABELS[
                       userInfo?.enrollmentStatus ?? EnrollmentStatus.ENROLLED
@@ -57,7 +59,9 @@ export const MyProfile = ({ userInfo }: MyProfileProps) => {
               <div className="flex gap-2 items-center">
                 <Image src="/assets/icons/fieldBook.svg" alt="분야" width={16} height={16} />
                 <h6 className="text-sm font-normal leading-none text-gray-700">
-                  {FIELD_LABELS[userInfo?.fieldType ?? Field.FRONTEND]}
+                  {userInfo?.fieldType
+                    ? FIELD_LABELS[userInfo?.fieldType ?? Field.FRONTEND]
+                    : '분야 미정'}
                 </h6>
               </div>
             </div>

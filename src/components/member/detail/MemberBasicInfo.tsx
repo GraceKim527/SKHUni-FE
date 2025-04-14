@@ -60,7 +60,11 @@ export default function MemberBasicInfo({ member }: { member: UserInfo }) {
     <div className="flex justify-between p-4 w-full bg-white rounded-lg border border-gray-300 md:w-auto md:gap-8 sm:px-8 sm:py-6">
       <div className="flex flex-col gap-8 items-center w-full md:flex-row md:w-auto">
         <div className="flex flex-col gap-4">
-          <img src={member.picture} alt="member-profile" className="w-32 h-32 rounded-full" />
+          <img
+            src={member.picture}
+            alt="member-profile"
+            className="object-cover w-32 h-32 rounded-full"
+          />
         </div>
 
         <div className="flex flex-col gap-4">
@@ -77,13 +81,18 @@ export default function MemberBasicInfo({ member }: { member: UserInfo }) {
           <div className="flex flex-col gap-1">
             <div className="flex gap-2 items-center">
               <Image src="/assets/icons/mail.svg" alt="mail" width={16} height={17} />
-              <p className="text-sm leading-none text-gray-700">{member.contactEmail}</p>
+              <p className="text-sm leading-none text-gray-700">
+                {member.contactEmail || '이메일 비공개'}
+              </p>
             </div>
             <div className="flex gap-2 items-center">
               <Image src="/assets/icons/school.svg" alt="학번" width={16} height={16} />
               <h6 className="text-sm font-normal leading-none text-gray-700">
-                {member.studentId}학번 (
-                {ENROLLMENT_STATUS_LABELS[member.enrollmentStatus ?? EnrollmentStatus.ENROLLED]})
+                {member.studentId
+                  ? `${member.studentId}학번 (${
+                      ENROLLMENT_STATUS_LABELS[member.enrollmentStatus ?? EnrollmentStatus.ENROLLED]
+                    })`
+                  : '학번 미공개'}
               </h6>
             </div>
           </div>

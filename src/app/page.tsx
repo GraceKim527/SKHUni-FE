@@ -7,6 +7,8 @@ import { useEffect, useState } from 'react';
 import { UserCountBanner } from '@/components/main/UserCountBanner';
 import { MemberPreviewSection } from '@/components/main/MemberPreviewSection';
 import LoadingSpinner from '@/components/common/LoadingSpinner';
+import OnboardingBanner from '@/components/main/OnboardingBanner';
+
 export default function Home() {
   const [members, setMembers] = useState<UserInfo[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -40,7 +42,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col justify-center items-center mb-16">
-      <div className="w-full h-[20rem] relative md:h-[30rem]">
+      <div className="w-full h-[20rem] relative md:h-[25rem]">
         <Image
           src="/assets/img/skhuni_banner.png"
           alt="logo"
@@ -56,6 +58,7 @@ export default function Home() {
         </div>
       ) : (
         <section className="flex flex-col w-full lg:w-[70rem] px-4">
+          <OnboardingBanner />
           <UserCountBanner count={members.length} />
           <div className="flex flex-col gap-16">
             <MemberPreviewSection type="coffeeChat" members={coffeeChatMembers} />
