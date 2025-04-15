@@ -11,7 +11,7 @@ import { deleteProject, getMyProjects } from '@/apis/projects';
 import { MyProjectCard } from '@/components/mypage/MyProjectCard';
 import { Project } from '@/types/projects';
 import { useRouter } from 'next/navigation';
-
+import toast from 'react-hot-toast';
 export default function MyPage() {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
@@ -45,11 +45,14 @@ export default function MyPage() {
   }, [role]);
 
   const handleDeleteProject = async (projectId: number) => {
-    try {
-      await deleteProject(projectId);
-      setProjects(projects.filter((project) => project.projectId !== projectId));
-    } catch (error) {
-      console.error('프로젝트 삭제 실패:', error);
+    if (confirm('정말 삭제하시겠습니까?')) {
+      try {
+        await deleteProject(projectId);
+        setProjects(projects.filter((project) => project.projectId !== projectId));
+        toast.success('프로젝트가 성공적으로 삭제되었습니다.');
+      } catch (error) {
+        console.error('프로젝트 삭제 실패:', error);
+      }
     }
   };
 

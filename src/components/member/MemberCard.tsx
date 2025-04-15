@@ -9,14 +9,15 @@ interface MemberCardProps {
 export const MemberCard = ({ member }: MemberCardProps) => {
   const router = useRouter();
   return (
-    <div className="flex gap-8 w-full">
+    <div className="flex gap-4 w-full sm:gap-8">
       <img
         src={member.picture}
         alt="profile"
         width={100}
         height={100}
         style={{ width: '100px', height: '100px' }}
-        className="object-cover rounded-full"
+        className="object-cover rounded-full cursor-pointer hover:opacity-80"
+        onClick={() => router.push(`/member/${member.memberId}`)}
       />
       <div className="flex flex-col gap-2">
         <div className="flex gap-2 items-center">

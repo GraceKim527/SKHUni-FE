@@ -7,7 +7,7 @@ interface MemberIntroductionProps {
 
 export const MemberIntroduction = ({ introduction }: MemberIntroductionProps) => {
   return (
-    <div>
+    <div className="pb-8">
       <MdPreview value={introduction || '소개글이 없습니다'} theme="light" language="ko-KR" />
     </div>
   );

@@ -7,8 +7,7 @@ export default function MembersPage() {
         <div className="flex flex-col gap-2">
           <h3 className="text-2xl font-bold">등록된 회대 멤버 목록</h3>
           <p className="text-sm text-gray-500">
-            성공회대 IT 커뮤니티 스쿠니에 등록된 멤버를 확인할 수 있습니다. <br />
-            멤버로 등록되지 않았다면, <b>로그인 후 재학생 인증</b>을 해주세요.
+            성공회대 IT 커뮤니티 스쿠니에 등록된 멤버를 확인할 수 있습니다.
           </p>
         </div>
         <MemberListPage />

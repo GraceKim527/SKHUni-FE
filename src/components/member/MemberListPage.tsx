@@ -7,8 +7,10 @@ import { MemberFilterBar } from './filters/MemberFilterBar';
 import { getMemberList } from '@/apis/members';
 import { EnrollmentStatus, Field, MemberList } from '@/types/users';
 import LoadingSpinner from '../common/LoadingSpinner';
-
+import Link from 'next/link';
+import { useAuthStore } from '@/store/useAuthStore';
 export const MemberListPage = () => {
+  const { role } = useAuthStore();
   const [memberList, setMemberList] = useState<MemberList>({
     members: [],
     pageInfo: {
@@ -56,7 +58,14 @@ export const MemberListPage = () => {
       setIsLoading(false);
     };
     fetchMemberList();
-  }, [filters]);
+  }, [
+    filters.page,
+    filters.name,
+    filters.field,
+    filters.enrollmentStatus,
+    filters.coffeeChat,
+    filters.codeReview,
+  ]);
 
   // 페이지 변경 시 filters.page 업데이트
   const handlePageChange = (page: number) => {
@@ -68,6 +77,20 @@ export const MemberListPage = () => {
 
   return (
     <div className="flex flex-col gap-8">
+      {role === 'ROLE_USER' && (
+        <div className="flex justify-between items-center px-3 py-6 sm:px-4 sm:py-3 text-sm text-gray-700 bg-[#F5F0E1] rounded-lg border border-[#F4C430] sm:flex-row flex-col gap-2">
+          <p>
+            아직 재학생 인증을 안하셨네요! <br />
+            재학생 인증하고 스쿠니 멤버에 함께해주세요!
+          </p>
+          <Link
+            href="/mypage"
+            className="ml-4 px-4 py-2 text-xs bg-[#512DA8] rounded-md hover:bg-[#3f2291]"
+          >
+            <span className="text-white">재학생 인증하러 가기</span>
+          </Link>
+        </div>
+      )}
       <MemberFilterBar filters={filters} setFilters={setFilters} />
       {isLoading ? (
         <div className="flex justify-center items-center h-[20rem]">

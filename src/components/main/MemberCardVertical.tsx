@@ -17,7 +17,7 @@ export const MemberCardVertical = ({ member }: { member: UserInfo }) => {
         <h3 className="text-xl font-bold">{member.name}</h3>
         <p className="text-sm text-gray-500">{FIELD_LABELS[member.fieldType] || '분야 미정'}</p>
         <h6 className="text-sm font-normal leading-none text-gray-700">
-          {member.studentId}학번 (
+          {member.studentId ? `${member.studentId}학번` : '학번 미정'} (
           {ENROLLMENT_STATUS_LABELS[member.enrollmentStatus ?? EnrollmentStatus.ENROLLED]})
         </h6>
       </div>

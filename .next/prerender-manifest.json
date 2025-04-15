@@ -1,6 +1,30 @@
 {
   "version": 4,
   "routes": {
+    "/about": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/about",
+      "dataRoute": "/about.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/login": {
       "experimentalBypassFor": [
         {
@@ -49,6 +73,30 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/mypage": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/mypage",
+      "dataRoute": "/mypage.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/mypage/edit": {
       "experimentalBypassFor": [
         {
@@ -64,54 +112,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/mypage/edit",
       "dataRoute": "/mypage/edit.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/mypage/project/new": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/mypage/project/new",
-      "dataRoute": "/mypage/project/new.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/about": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/about",
-      "dataRoute": "/about.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -145,7 +145,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/mypage": {
+    "/mypage/project/new": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -158,8 +158,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/mypage",
-      "dataRoute": "/mypage.rsc",
+      "srcRoute": "/mypage/project/new",
+      "dataRoute": "/mypage/project/new.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -173,8 +173,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "d2a4de7b1988fab2ab088de7d3da7e41",
-    "previewModeSigningKey": "8a0b569d905049c2df8b89802002aa2dd2057668f4f60e75518296a247451604",
-    "previewModeEncryptionKey": "0dc64c6494c2788cf36dc3ebbccd125b99f569cb74b3a656b0ac19f17bcfbaf7"
+    "previewModeId": "fcec476544b81b1aa33ab37f1bdf4d8d",
+    "previewModeSigningKey": "040fecf1405191ea55c1e6b1c20dcaa5bd8b3502d9d1bb1a32a3ad0b2df875fd",
+    "previewModeEncryptionKey": "86497184010c0fdc08bf982705f1ac3bf9ea79c81e2bde1ab525a066ae8e2f64"
   }
 }

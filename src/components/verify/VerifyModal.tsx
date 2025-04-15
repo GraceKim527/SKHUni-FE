@@ -18,14 +18,11 @@ export default function VerifyModal({
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
+  // 코드 전송
   const handleSendCode = async () => {
-    if (!email.endsWith('@office.skhu.ac.kr')) {
-      setError('학교 이메일만 입력 가능합니다.');
-      return;
-    }
     try {
       setLoading(true);
-      await sendEmailCode(email);
+      await sendEmailCode(email + '@office.skhu.ac.kr');
       setStep('code');
       setError('');
     } catch {
@@ -35,6 +32,7 @@ export default function VerifyModal({
     }
   };
 
+  // 인증 확인
   const handleVerify = async () => {
     if (code.length !== 6) {
       setError('6자리 인증번호를 입력해주세요.');
@@ -42,7 +40,7 @@ export default function VerifyModal({
     }
     try {
       setLoading(true);
-      await checkEmailCode(email, code);
+      await checkEmailCode(email + '@office.skhu.ac.kr', code);
       onSuccess(); // 인증 완료 처리
       onClose(); // 모달 닫기
     } catch {

@@ -4,8 +4,8 @@ import Image from 'next/image';
 export default function Footer() {
   return (
     <footer className="w-full bg-white">
-      <div className="flex justify-between items-center px-8 py-8 w-full">
-        <h3 className="text-base font-bold text-gray-800 md:text-2xl">
+      <div className="flex justify-between items-center px-4 py-4 w-full sm:px-8 sm:py-8">
+        <h3 className="text-sm font-bold text-gray-800 md:text-2xl">
           Fly your Ideas with your Colleagues
         </h3>
         <div className="flex gap-4">

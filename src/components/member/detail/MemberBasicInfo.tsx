@@ -7,8 +7,9 @@ import { useEffect, useRef, useState } from 'react';
 import { AbleBadge } from '@/components/common/AbleBadge';
 import { RequestModal } from './RequestModal';
 import { useAuthStore } from '@/store/useAuthStore';
-
+import { useRouter } from 'next/navigation';
 export default function MemberBasicInfo({ member }: { member: UserInfo }) {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<'커피챗 요청' | '코드리뷰 요청' | null>(
     null
@@ -30,7 +31,8 @@ export default function MemberBasicInfo({ member }: { member: UserInfo }) {
 
   const handleSelect = (option: string) => {
     if (isGuest) {
-      alert('로그인 후 이용 가능해요.');
+      alert('로그인 후 이용 가능한 서비스입니다.');
+      router.push('/login');
       return;
     }
     if (
@@ -111,7 +113,7 @@ export default function MemberBasicInfo({ member }: { member: UserInfo }) {
           </div>
         </div>
       </div>
-      <div className="relative" ref={dropdownRef}>
+      <div className="relative mt-4 sm:mt-0" ref={dropdownRef}>
         {!member.isMine && (
           <button
             type="button"
